@@ -37,7 +37,7 @@ const AddFriendButton: FC<AddFriendButtonProps> = ({}) => {
       if (error instanceof z.ZodError) {
         setError('email', { message: error.message })
         return
-      } 
+      }
 
       if (error instanceof AxiosError) {
         setError('email', { message: error.response?.data })

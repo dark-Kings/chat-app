@@ -1,11 +1,7 @@
-import Button from '@/components/ui/Button'
+"use client"
 
+import { signOut } from 'next-auth/react'
 
-export default async function Home() {
- 
-  //  await db.set("hello",'hello')
-   
-  return (
-     <Button variant='ghost'>hello</Button>
-  )
+export default function Home() {
+  return <button onClick={() => signOut()}>Sign out</button>
 }
